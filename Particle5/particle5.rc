@@ -1,0 +1,163 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+APPMENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Tool Box",                    ID_VIEW_TOOLBOX
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+TOOLBOX DIALOGEX 0, 0, 43, 213
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION "Toolbox"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "e-",IDC_ELECTRON,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,0,10,22,22,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "e+",IDC_POSITRON,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,21,10,22,22,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "N",IDC_NUCLEUS,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,0,32,22,22,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "DEL",IDC_DELETE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,21,55,21,22,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    GROUPBOX        "Field",IDC_STATIC,0,81,43,110,0,WS_EX_TRANSPARENT
+    CONTROL         "Subtract",IDC_FIELD_SUBTRACT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,0,91,43,16,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "Real",IDC_FIELD_REAL,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,0,107,43,16,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    GROUPBOX        "Objects",IDC_STATIC,0,0,43,78,0,WS_EX_TRANSPARENT
+    CONTROL         "Lines",IDC_FIELD_LINES,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,0,123,43,16,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "Color 1",IDC_COLOR1,"Button",BS_OWNERDRAW | WS_TABSTOP,0,140,43,19,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Color 2",IDC_COLOR2,"Button",BS_OWNERDRAW | WS_TABSTOP,0,158,43,19,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_FIELD_COLOR_SCALE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,0,178,43,12
+    PUSHBUTTON      "Pause",IDC_PAUSE,0,196,43,16
+    CONTROL         "M",IDC_MAGNET,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,21,32,22,22,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+ELEMENTSBOX DIALOGEX 0, 0, 117, 141
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+EXSTYLE WS_EX_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_EX_APPWINDOW
+CAPTION "Select Element"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,120,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,59,120,50,14
+    LISTBOX         IDC_ELEMENTS,7,7,103,107,LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+SFLTOOLBOX DIALOGEX 0, 0, 163, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION "Charge Potential Field Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Switch to Lines",IDC_SFL_METHOD_TOGGLE,2,7,158,12
+    CONTROL         "",IDC_SFL_MULTIPLIER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,2,35,158,12
+    LTEXT           "Field Line Multiplier",IDC_SFL_MULTI_TEXT,2,26,92,10
+    LTEXT           "Field Line Modulus",IDC_SFL_MOD_TEXT,2,54,92,10
+    CONTROL         "",IDC_SFL_MODULUS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,2,63,158,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "ELEMENTSBOX", DIALOG
+    BEGIN
+        , 69, 7
+        , 71, 110
+    END
+
+    "SFLTOOLBOX", DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
